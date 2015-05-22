@@ -1,5 +1,5 @@
 # OpenNI 2 Makefile
-# 
+#
 # Default configuration is Release. for a debug version use:
 # 	make CFG=Debug
 #
@@ -27,7 +27,7 @@ else
 	OS_NAME = Linux
 endif
 
-PRODUCT_STRING = OpenNI-$(OS_NAME)-$(PLATFORM)-$(shell cd Packaging && python2 -c "import UpdateVersion; print UpdateVersion.getVersionName()" && cd ..)
+PRODUCT_STRING = OpenNI-$(OS_NAME)-$(PLATFORM)-$(shell cd Packaging && python2.7 -c "import UpdateVersion; print UpdateVersion.getVersionName()" && cd ..)
 
 FINAL_DIR = Packaging/Final
 
@@ -54,7 +54,7 @@ CXX_SAMPLES_SUBDIRS = \
 	Samples/EventBasedRead \
 	Samples/MultipleStreamRead \
 	Samples/MWClosestPoint \
-	Samples/MWClosestPointApp 
+	Samples/MWClosestPointApp
 
 #-------------------------------------------------------------------------------
 # Java
@@ -64,7 +64,7 @@ JAVA_MAIN_SUBDIRS = \
 	Wrappers/java/jni
 
 JAVA_SAMPLES_SUBDIRS = \
-	Samples/SimpleViewer.java	
+	Samples/SimpleViewer.java
 
 #-------------------------------------------------------------------------------
 # GLUT
@@ -115,10 +115,10 @@ CLEAN_SUBDIRS = $(foreach target,$(ALL_SUBDIRS),$(target)-clean)
 
 # Define a function for creating per-subdirectory target rules.
 define CREATE_SUBDIR
-$1: 
+$1:
 	$$(MAKE) -C $1
 
-$1-clean: 
+$1-clean:
 	$$(MAKE) -C $1 clean
 endef
 
