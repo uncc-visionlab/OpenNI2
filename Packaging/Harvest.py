@@ -110,7 +110,8 @@ class Harvest:
             self.copySharedObject(binDriversDir, 'usb', targetDriversDir)
 
         self.copySharedObject(binDriversDir, 'OniFile', targetDriversDir)
-        self.copySharedObject(binDriversDir, 'PS1080', targetDriversDir)
+        #temporarily disable PS1080 packaging. orbbec driver handles same devices.
+        #self.copySharedObject(binDriversDir, 'PS1080', targetDriversDir)
         self.copySharedObject(binDriversDir, 'orbbec', targetDriversDir)
         self.copySharedObject(binDriversDir, 'PSLink', targetDriversDir)
 
