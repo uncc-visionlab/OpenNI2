@@ -194,7 +194,7 @@ main: $(MAIN_SUBDIRS)
 samples: $(SAMPLES_SUBDIRS)
 
 doc:
-	Source/Documentation/Runme.py
+	#Source/Documentation/Runme.py
 	rm -f Source/Documentation/html/*.md5
 
 release: | all doc $(FINAL_DIR)
