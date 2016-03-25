@@ -115,3 +115,16 @@ Creating OpenNI2 Package
 - Run ReleaseVersion.py [x86|x64|Arm|Android]
 - Installer will be placed in the 'Final' directory
 
+Building in an armhf qemu-enabled docker container
+==================================================
+- Checkout the code (because git doesn't work inside qemu):
+  $ git clone https://github.com/osrf/OpenNI2
+  $ cd OpenNI2
+  $ git checkout orbbec-dev
+  $ cd ..
+- Start docker, mounting in the git repo:
+  $ docker run -ti -v `pwd`/OpenNI2:/tmp/OpenNI2 osrf/ubuntu_armhf:trusty bash
+- Now inside docker, install prereqs:
+  
+
+
