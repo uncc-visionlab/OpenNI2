@@ -117,6 +117,9 @@ Creating OpenNI2 Package
 
 Building in an armhf qemu-enabled docker container
 ==================================================
+- Note: we're building from the osrf fork which has a couple of minor tweaks compared to the orbbec upstream repo (https://github.com/orbbec/OpenNI2/compare/orbbec-dev...osrf:orbbec-dev?expand=1):
+  - don't force soft-float in third-party software (because we're building with hard-float)
+  - disable documentation generation (because we don't need it, and also because doxygen seems to just hang in this environment).
 - Check out the code (because git doesn't work inside qemu):
   $ git clone https://github.com/osrf/OpenNI2
   $ cd OpenNI2
