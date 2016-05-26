@@ -92,7 +92,7 @@ class Harvest:
     def copyRedistFiles(self, targetDir):
         os.makedirs(targetDir)
         # start with OpenNI itself
-        self.copySharedObject(self.binDir, 'OpenNI2', targetDir)
+        self.copySharedObject(self.binDir, 'OpenNI2Orbbec', targetDir)
         self.copySharedObject(self.binDir, 'OpenNI2.jni', targetDir)
 
         if self.osName != 'Android':

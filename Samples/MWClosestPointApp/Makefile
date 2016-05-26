@@ -9,7 +9,7 @@ INC_DIRS = \
 
 SRC_FILES = *.cpp
 
-USED_LIBS += OpenNI2 MWClosestPoint
+USED_LIBS += OpenNI2Orbbec MWClosestPoint
 
 EXE_NAME = MWClosestPointApp
 

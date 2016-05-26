@@ -17,7 +17,7 @@ else
 	USED_LIBS += glut GL
 endif
 
-USED_LIBS += OpenNI2
+USED_LIBS += OpenNI2Orbbec
 
 EXE_NAME = MultiDepthViewer
 

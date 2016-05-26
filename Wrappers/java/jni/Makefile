@@ -9,7 +9,7 @@ INC_DIRS = \
 
 SRC_FILES = *.cpp
 
-USED_LIBS += OpenNI2 
+USED_LIBS += OpenNI2Orbbec 
 
 LIB_NAME = OpenNI2.jni
 

@@ -18,7 +18,7 @@ else
 	USED_LIBS += glut GL
 endif
 
-USED_LIBS += OpenNI2 MWClosestPoint
+USED_LIBS += OpenNI2Orbbec MWClosestPoint
 
 EXE_NAME = ClosestPointViewer
 

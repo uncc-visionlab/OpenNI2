@@ -8,7 +8,7 @@ INC_DIRS = \
 
 SRC_FILES = *.cpp
 
-USED_LIBS += OpenNI2
+USED_LIBS += OpenNI2Orbbec
 
 EXE_NAME = SimpleRead
 

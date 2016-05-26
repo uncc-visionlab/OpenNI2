@@ -27,7 +27,7 @@ ifeq ("$(OSTYPE)","Darwin")
 		-framework IOKit
 endif
 
-LIB_NAME = OpenNI2
+LIB_NAME = OpenNI2Orbbec
 
 LIB_DIRS = ../../ThirdParty/PSCommon/XnLib/Bin/$(PLATFORM)-$(CFG)
 USED_LIBS = XnLib dl pthread
