@@ -28,7 +28,7 @@ else
 endif
 
 PRODUCT_STRING = OpenNI-$(OS_NAME)-$(PLATFORM)-$(shell cd Packaging && python2.7 -c "import UpdateVersion; print UpdateVersion.getVersionName()" && cd ..)
-
+TARBALL_NAME = OpenNI-$(OS_NAME)-$(shell cd Packaging && python2.7 -c "import UpdateVersion; print UpdateVersion.getVersionName()" && cd ..)
 FINAL_DIR = Packaging/Final
 
 CORE = Source/Core
@@ -41,10 +41,10 @@ DEPTH_UTILS = Source/DepthUtils
 CXX_MAIN_SUBDIRS = \
 	$(CORE) \
 	ThirdParty/PSCommon/XnLib/Source \
-	Source/Drivers/DummyDevice   \
 	Source/DepthUtils \
 	Source/Drivers/orbbec
 
+	# Source/Drivers/DummyDevice   \
 	# Source/Drivers/PS1080 \
 	# Source/Drivers/PSLink \
 	# Source/Drivers/OniFile \
@@ -200,7 +200,7 @@ doc:
 
 release: | all doc $(FINAL_DIR)
 	Packaging/Harvest.py Packaging/$(PRODUCT_STRING) $(PLATFORM)
-	cd Packaging; tar -cjf Final/$(PRODUCT_STRING).tar.bz2 $(PRODUCT_STRING)
+	cd Packaging; tar -cjf Final/$(TARBALL_NAME).tar.bz2 $(PRODUCT_STRING)
 
 clean: $(CLEAN_SUBDIRS)
 
