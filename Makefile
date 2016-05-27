@@ -71,15 +71,15 @@ JAVA_SAMPLES_SUBDIRS = \
 #-------------------------------------------------------------------------------
 # GLUT
 
-ifeq "$(GLUT_SUPPORTED)" "1"
-	CXX_MAIN_SUBDIRS += \
-		Source/Tools/NiViewer
-
-	CXX_SAMPLES_SUBDIRS += \
-		Samples/SimpleViewer \
-		Samples/MultiDepthViewer \
-		Samples/ClosestPointViewer
-endif
+# ifeq "$(GLUT_SUPPORTED)" "1"
+# 	CXX_MAIN_SUBDIRS += \
+# 		Source/Tools/NiViewer
+# 
+# 	CXX_SAMPLES_SUBDIRS += \
+# 		Samples/SimpleViewer \
+# 		Samples/MultiDepthViewer \
+# 		Samples/ClosestPointViewer
+# endif
 
 #-------------------------------------------------------------------------------
 # Target groups
