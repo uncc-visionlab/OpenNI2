@@ -41,7 +41,7 @@ else
     USED_LIBS += usb-1.0.0
 endif
 
-CFLAGS += -Wall
+CFLAGS += -Wall -Wno-unused-variable
 
 OUT_DIR := $(OUT_DIR)/OpenNI2/Drivers
 

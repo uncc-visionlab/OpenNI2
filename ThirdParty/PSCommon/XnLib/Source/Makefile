@@ -28,6 +28,6 @@ USED_LIBS = usb-1.0 dl pthread udev
 ifneq ("$(OSTYPE)","Darwin")
 	USED_LIBS += rt 
 endif
-CFLAGS += -Wall
+CFLAGS += -Wall -Wno-unused-variable
 
 include ../../BuildSystem/CommonCppMakefile
