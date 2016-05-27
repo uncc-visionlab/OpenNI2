@@ -201,6 +201,7 @@ doc:
 release: | all doc $(FINAL_DIR)
 	Packaging/Harvest.py Packaging/$(PRODUCT_STRING) $(PLATFORM)
 	cd Packaging; tar -cjf Final/$(TARBALL_NAME).tar.bz2 $(PRODUCT_STRING)
+	rm -rf Packaging/$(PRODUCT_STRING)
 
 clean: $(CLEAN_SUBDIRS)
 
