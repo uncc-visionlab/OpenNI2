@@ -29,6 +29,16 @@ else
 	DUMMY:=$(error Can't determine host platform)
 endif
 
+#for x64 machine run i386 images
+MACHINEBITS = $(shell file /bin/ls)
+ifeq ($(HOST_PLATFORM), x64)
+	ifneq (,$(findstring 32-bit,$(MACHINEBITS)))
+		HOST_PLATFORM = x86
+	endif
+endif
+
+$(warning HOST_PLATFORM is $(HOST_PLATFORM))
+
 # now check if this is a cross-compilation or not
 ifeq "$(PLATFORM)" ""
 	PLATFORM = $(HOST_PLATFORM)
