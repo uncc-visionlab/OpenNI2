@@ -40,8 +40,8 @@ XnFrameStreamProcessor::XnFrameStreamProcessor(XnFrameStream* pStream, XnSensorS
 	m_nLastSOFPacketID(0),
 	m_nFirstPacketTimestamp(0)
 {
-	sprintf(m_csInDumpMask, "%sIn", pStream->GetType());
-	sprintf(m_csInternalDumpMask, "Internal%s", pStream->GetType());
+	sprintf(m_csInDumpMask, "%.97sIn", pStream->GetType());
+	sprintf(m_csInternalDumpMask, "Internal%.91s", pStream->GetType());
 	m_InDump = xnDumpFileOpen(m_csInDumpMask, "%s_0.raw", m_csInDumpMask);
 	m_InternalDump = xnDumpFileOpen(m_csInternalDumpMask, "%s_0.raw", m_csInternalDumpMask);
 }
